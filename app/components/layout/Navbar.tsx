@@ -14,11 +14,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/type.svg"
+            src="/Type.svg"
             alt="Kepler22b Logo"
             className="h-16 sm:h-20"
-            width={100}
-            height={100}
+            width={200}
+            height={300}
           />
         </Link>
 

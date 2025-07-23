@@ -1,5 +1,6 @@
 "use client";
-import { Link } from "lucide-react";
+import Link from "next/link";
+
 import Image from "next/image";
 
 import { useState } from "react";
@@ -16,6 +17,8 @@ export default function Navbar() {
             src="/type.svg"
             alt="Kepler22b Logo"
             className="h-16 sm:h-20"
+            width={100}
+            height={100}
           />
         </Link>
 

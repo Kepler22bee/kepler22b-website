@@ -6,35 +6,35 @@ import { FaDesktop } from "react-icons/fa";
 const games = [
   {
     name: "BlockRooms",
-    image: "./gametileFinal.png",
+    image: "/gametileFinal.png",
     platforms: [<FaDesktop key="d" />],
     widthClass: "lg:w-[50%]",
     height: "450px",
   },
   {
     name: "[Redacted]",
-    image: "./preVid.mp4",
+    image: "/preVid.mp4",
     platforms: [],
     widthClass: "lg:w-[45%]",
     height: "450px",
   },
   {
     name: "[Redacted]",
-    image: "./pre1.jpg",
+    image: "/pre1.jpg",
     platforms: [],
     widthClass: "lg:w-[30%]",
     height: "280px",
   },
   {
     name: "[Redacted]",
-    image: "./pre2.jpg",
+    image: "/pre2.jpg",
     platforms: [],
     widthClass: "lg:w-[30%]",
     height: "280px",
   },
   {
     name: "[Redacted]",
-    image: "https://source.unsplash.com/600x400/?cardgame,magic",
+    image: "/pre3.jpg",
     platforms: [],
     widthClass: "lg:w-[30%]",
     height: "280px",
@@ -74,14 +74,17 @@ const GameGrid = () => {
                     className={`w-full h-full object-cover ${blurClass}`}
                   />
                 ) : (
-                  <Image
-                    src={game.image}
-                    alt={game.name}
-                    className={`w-full h-full object-cover ${blurClass}`}
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={game.image}
+                      alt={game.name}
+                      fill
+                      className={`object-cover ${blurClass}`}
+                    />
+                  </div>
                 )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 z-10">
                   <h3 className="text-white text-2xl font-semibold">
                     {game.name}

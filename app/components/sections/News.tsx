@@ -37,7 +37,8 @@ const NewsCard = ({ title, image, category = "NEWS" }: NewsCardProps) => (
         <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          fill
+          className="object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/5 to-white/10 pointer-events-none" />
       </div>
@@ -52,25 +53,25 @@ const App = () => {
       <div className="max-w-2xl space-y-6   ">
         <NewsCard
           title="Kepler22b Studios take on FOCG"
-          image="image2.png"
+          image="/image2.png"
           category="BLOG"
         />
 
         <NewsCard
           title="When to expect Blockrooms alpha release?"
-          image="image5.jpg"
+          image="/image5.jpg"
           category="GAME"
         />
 
         <NewsCard
           title="Roadblocks with 3D onchain games"
-          image="image3.png"
+          image="/image3.png"
           category="TECHNOLOGY"
         />
 
         <NewsCard
           title="Design or Infra? Choosing what's best for the market"
-          image="image4.jpeg"
+          image="/image4.jpeg"
           category="DESIGN"
         />
       </div>
